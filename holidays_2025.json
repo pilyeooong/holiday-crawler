@@ -1,0 +1,120 @@
+{
+  "fetchedAt": "2025-12-20T11:20:39.065276",
+  "totalCount": 19,
+  "holidays": [
+    {
+      "dateName": "1월1일",
+      "locdate": 20250101,
+      "date": "2025-01-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "임시공휴일",
+      "locdate": 20250127,
+      "date": "2025-01-27",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20250128,
+      "date": "2025-01-28",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20250129,
+      "date": "2025-01-29",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20250130,
+      "date": "2025-01-30",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "삼일절",
+      "locdate": 20250301,
+      "date": "2025-03-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일",
+      "locdate": 20250303,
+      "date": "2025-03-03",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "어린이날",
+      "locdate": 20250505,
+      "date": "2025-05-05",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일",
+      "locdate": 20250506,
+      "date": "2025-05-06",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "임시공휴일(제21대 대통령 선거)",
+      "locdate": 20250603,
+      "date": "2025-06-03",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "현충일",
+      "locdate": 20250606,
+      "date": "2025-06-06",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "광복절",
+      "locdate": 20250815,
+      "date": "2025-08-15",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "개천절",
+      "locdate": 20251003,
+      "date": "2025-10-03",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20251005,
+      "date": "2025-10-05",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20251006,
+      "date": "2025-10-06",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20251007,
+      "date": "2025-10-07",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일",
+      "locdate": 20251008,
+      "date": "2025-10-08",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "한글날",
+      "locdate": 20251009,
+      "date": "2025-10-09",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "기독탄신일",
+      "locdate": 20251225,
+      "date": "2025-12-25",
+      "isHoliday": "Y"
+    }
+  ]
+}

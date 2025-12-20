@@ -1,0 +1,126 @@
+{
+  "fetchedAt": "2025-12-20T11:20:42.127702",
+  "totalCount": 20,
+  "holidays": [
+    {
+      "dateName": "1월1일",
+      "locdate": 20260101,
+      "date": "2026-01-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20260216,
+      "date": "2026-02-16",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20260217,
+      "date": "2026-02-17",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20260218,
+      "date": "2026-02-18",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "삼일절",
+      "locdate": 20260301,
+      "date": "2026-03-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일(삼일절)",
+      "locdate": 20260302,
+      "date": "2026-03-02",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "어린이날",
+      "locdate": 20260505,
+      "date": "2026-05-05",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "부처님오신날",
+      "locdate": 20260524,
+      "date": "2026-05-24",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일(부처님오신날)",
+      "locdate": 20260525,
+      "date": "2026-05-25",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "전국동시지방선거",
+      "locdate": 20260603,
+      "date": "2026-06-03",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "현충일",
+      "locdate": 20260606,
+      "date": "2026-06-06",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "광복절",
+      "locdate": 20260815,
+      "date": "2026-08-15",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일(광복절)",
+      "locdate": 20260817,
+      "date": "2026-08-17",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20260924,
+      "date": "2026-09-24",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20260925,
+      "date": "2026-09-25",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20260926,
+      "date": "2026-09-26",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "개천절",
+      "locdate": 20261003,
+      "date": "2026-10-03",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일(개천절)",
+      "locdate": 20261005,
+      "date": "2026-10-05",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "한글날",
+      "locdate": 20261009,
+      "date": "2026-10-09",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "기독탄신일",
+      "locdate": 20261225,
+      "date": "2026-12-25",
+      "isHoliday": "Y"
+    }
+  ]
+}
