@@ -3,13 +3,19 @@
 공공데이터포털 API를 활용하여 공휴일 정보를 조회하고 JSON으로 저장
 """
 
+import os
 import requests
 import json
 from datetime import datetime
 from pathlib import Path
+from dotenv import load_dotenv
 
+# .env 파일 로드
+load_dotenv()
 
-API_KEY = "YOUR_DATA_GO_KR_SERVICE_KEY"
+API_KEY = os.environ.get("HOLIDAY_API_KEY")
+if not API_KEY:
+    raise ValueError("HOLIDAY_API_KEY 환경변수가 설정되지 않았습니다. .env 파일을 확인하세요.")
 BASE_URL = "https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo"
 
 

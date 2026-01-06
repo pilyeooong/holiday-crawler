@@ -107,3 +107,50 @@ GET https://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeIn
 - 공휴일 정책 변경 시 데이터 갱신 필요
 - 공공데이터 이용 약관 준수
 
+---
+
+## 11. GitHub Raw URL로 공휴일 데이터 조회
+
+크롤링된 공휴일 JSON 파일을 GitHub Raw URL을 통해 직접 조회할 수 있습니다.
+
+### Raw URL 형식
+
+```
+https://raw.githubusercontent.com/{user}/{repo}/{branch}/{파일경로}
+```
+
+### 공휴일 데이터 URL
+
+```
+# 2025년 공휴일
+https://raw.githubusercontent.com/pilyeooong/holiday-crawler/master/holidays_2025.json
+
+# 2026년 공휴일
+https://raw.githubusercontent.com/pilyeooong/holiday-crawler/master/holidays_2026.json
+```
+
+### 사용 예시 (Python)
+
+```python
+import requests
+
+url = "https://raw.githubusercontent.com/pilyeooong/holiday-crawler/master/holidays_2025.json"
+response = requests.get(url)
+holidays = response.json()
+
+for h in holidays["holidays"]:
+    print(f"{h['date']} : {h['dateName']}")
+```
+
+### 사용 예시 (JavaScript)
+
+```javascript
+fetch("https://raw.githubusercontent.com/pilyeooong/holiday-crawler/master/holidays_2025.json")
+  .then(res => res.json())
+  .then(data => {
+    data.holidays.forEach(h => {
+      console.log(`${h.date} : ${h.dateName}`);
+    });
+  });
+```
+
