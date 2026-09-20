@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2025-12-20T11:20:42.127702",
-  "totalCount": 20,
+  "fetchedAt": "2026-09-20T09:20:02.319090",
+  "totalCount": 22,
   "holidays": [
     {
       "dateName": "1월1일",
@@ -39,6 +39,12 @@
       "isHoliday": "Y"
     },
     {
+      "dateName": "노동절",
+      "locdate": 20260501,
+      "date": "2026-05-01",
+      "isHoliday": "Y"
+    },
+    {
       "dateName": "어린이날",
       "locdate": 20260505,
       "date": "2026-05-05",
@@ -66,6 +72,12 @@
       "dateName": "현충일",
       "locdate": 20260606,
       "date": "2026-06-06",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "제헌절",
+      "locdate": 20260717,
+      "date": "2026-07-17",
       "isHoliday": "Y"
     },
     {
