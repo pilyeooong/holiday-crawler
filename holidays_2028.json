@@ -1,0 +1,114 @@
+{
+  "fetchedAt": "2026-09-20T09:20:06.769478",
+  "totalCount": 18,
+  "holidays": [
+    {
+      "dateName": "1월1일",
+      "locdate": 20280101,
+      "date": "2028-01-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20280126,
+      "date": "2028-01-26",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20280127,
+      "date": "2028-01-27",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "설날",
+      "locdate": 20280128,
+      "date": "2028-01-28",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "삼일절",
+      "locdate": 20280301,
+      "date": "2028-03-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "국회의원선거일",
+      "locdate": 20280412,
+      "date": "2028-04-12",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "노동절",
+      "locdate": 20280501,
+      "date": "2028-05-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "부처님오신날",
+      "locdate": 20280502,
+      "date": "2028-05-02",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "어린이날",
+      "locdate": 20280505,
+      "date": "2028-05-05",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "현충일",
+      "locdate": 20280606,
+      "date": "2028-06-06",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "제헌절",
+      "locdate": 20280717,
+      "date": "2028-07-17",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "광복절",
+      "locdate": 20280815,
+      "date": "2028-08-15",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20281002,
+      "date": "2028-10-02",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "개천절",
+      "locdate": 20281003,
+      "date": "2028-10-03",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "추석",
+      "locdate": 20281004,
+      "date": "2028-10-04",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일(추석)",
+      "locdate": 20281005,
+      "date": "2028-10-05",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "한글날",
+      "locdate": 20281009,
+      "date": "2028-10-09",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "기독탄신일",
+      "locdate": 20281225,
+      "date": "2028-12-25",
+      "isHoliday": "Y"
+    }
+  ]
+}

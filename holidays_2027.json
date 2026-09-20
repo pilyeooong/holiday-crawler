@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-02-13T23:17:24.322999",
-  "totalCount": 21,
+  "fetchedAt": "2026-09-20T09:20:05.264392",
+  "totalCount": 24,
   "holidays": [
     {
       "dateName": "1월1일",
@@ -39,6 +39,18 @@
       "isHoliday": "Y"
     },
     {
+      "dateName": "노동절",
+      "locdate": 20270501,
+      "date": "2027-05-01",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일(노동절)",
+      "locdate": 20270503,
+      "date": "2027-05-03",
+      "isHoliday": "Y"
+    },
+    {
       "dateName": "어린이날",
       "locdate": 20270505,
       "date": "2027-05-05",
@@ -60,6 +72,12 @@
       "dateName": "제헌절",
       "locdate": 20270717,
       "date": "2027-07-17",
+      "isHoliday": "Y"
+    },
+    {
+      "dateName": "대체공휴일(제헌절)",
+      "locdate": 20270719,
+      "date": "2027-07-19",
       "isHoliday": "Y"
     },
     {

@@ -132,8 +132,18 @@ def save_to_json(data: list, filename: str):
 
 
 def main():
-    """메인 실행 함수"""
-    years = [2025, 2026]
+    """메인 실행 함수
+
+    사용법: python holiday_crawler.py [연도 ...]
+    연도를 생략하면 작년~내후년(4개 연도)을 갱신한다.
+    """
+    import sys
+
+    if len(sys.argv) > 1:
+        years = [int(arg) for arg in sys.argv[1:]]
+    else:
+        this_year = datetime.now().year
+        years = [this_year - 1, this_year, this_year + 1, this_year + 2]
 
     for year in years:
         print(f"\n=== {year}년 공휴일 데이터 크롤링 시작 ===\n")
