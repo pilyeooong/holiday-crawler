@@ -115,20 +115,41 @@ def fetch_year_holidays(year: int) -> list:
     return unique_holidays
 
 
-def save_to_json(data: list, filename: str):
-    """JSON 파일로 저장"""
+def load_existing_holidays(filepath: Path) -> list | None:
+    """기존 JSON의 holidays 배열을 읽는다. 파일이 없거나 깨져 있으면 None"""
+    if not filepath.exists():
+        return None
+    try:
+        with open(filepath, encoding="utf-8") as f:
+            return json.load(f).get("holidays")
+    except (json.JSONDecodeError, OSError, AttributeError):
+        return None
+
+
+def save_to_json(data: list, filename: str) -> bool:
+    """JSON 파일로 저장.
+
+    holidays 배열이 기존 파일과 같으면 쓰지 않는다 — fetchedAt만 바뀐 커밋이
+    매주 쌓이는 것을 막기 위해서다. 실제로 썼으면 True.
+    """
+    filepath = Path(__file__).parent / filename
+
+    if load_existing_holidays(filepath) == data:
+        print(f"변경 없음: {filepath}")
+        return False
+
     output = {
         "fetchedAt": datetime.now().isoformat(),
         "totalCount": len(data),
         "holidays": data
     }
 
-    filepath = Path(__file__).parent / filename
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     print(f"저장 완료: {filepath}")
-    return filepath
+    return True
 
 
 def main():
@@ -158,7 +179,8 @@ def main():
 
             save_to_json(holidays, f"holidays_{year}.json")
         else:
-            print(f"{year}년 조회된 공휴일이 없습니다.")
+            # 0건이면 기존 파일을 건드리지 않는다 — API 장애로 앱 달력이 비는 것을 막는다
+            print(f"{year}년 조회된 공휴일이 없습니다. 기존 파일을 유지합니다.")
 
 
 if __name__ == "__main__":

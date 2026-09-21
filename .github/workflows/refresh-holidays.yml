@@ -1,0 +1,48 @@
+name: Refresh holiday data
+
+on:
+  schedule:
+    # 매주 월요일 09:00 KST (00:00 UTC)
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "갱신할 연도 (공백 구분). 비우면 작년~내후년"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-holidays
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run crawler
+        env:
+          HOLIDAY_API_KEY: ${{ secrets.HOLIDAY_API_KEY }}
+        run: python holiday_crawler.py ${{ inputs.years }}
+
+      - name: Commit and push if holidays changed
+        run: |
+          if git diff --quiet -- 'holidays_*.json'; then
+            echo "변경 없음 — 커밋하지 않음"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add holidays_*.json
+          git commit -m "data: refresh holidays ($(date -u +%Y-%m-%d))"
+          git push
