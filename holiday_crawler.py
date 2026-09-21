@@ -4,6 +4,7 @@
 """
 
 import os
+import sys
 import requests
 import json
 from datetime import datetime
@@ -158,13 +159,13 @@ def main():
     사용법: python holiday_crawler.py [연도 ...]
     연도를 생략하면 작년~내후년(4개 연도)을 갱신한다.
     """
-    import sys
-
     if len(sys.argv) > 1:
         years = [int(arg) for arg in sys.argv[1:]]
     else:
         this_year = datetime.now().year
         years = [this_year - 1, this_year, this_year + 1, this_year + 2]
+
+    failed_years = []
 
     for year in years:
         print(f"\n=== {year}년 공휴일 데이터 크롤링 시작 ===\n")
@@ -181,6 +182,12 @@ def main():
         else:
             # 0건이면 기존 파일을 건드리지 않는다 — API 장애로 앱 달력이 비는 것을 막는다
             print(f"{year}년 조회된 공휴일이 없습니다. 기존 파일을 유지합니다.")
+            failed_years.append(year)
+
+    if failed_years:
+        # CI에서 조용히 성공으로 끝나지 않도록 실패로 종료 (API 차단·장애 감지용)
+        print(f"\n조회 실패 연도: {failed_years} — 네트워크/API 상태를 확인하세요.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
