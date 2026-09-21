@@ -1,9 +1,9 @@
 name: Refresh holiday data
 
+# 주의: GitHub 호스팅 러너(해외 IP)에서는 apis.data.go.kr 접속이 타임아웃된다(2026-09-21 확인).
+# 그래서 cron은 두지 않고 수동 실행만 남긴다. 실제 갱신은 로컬(한국 IP)에서
+# `python holiday_crawler.py` 실행 후 push. 한국 리전 프록시가 마련되면 schedule을 되살린다.
 on:
-  schedule:
-    # 매주 월요일 09:00 KST (00:00 UTC)
-    - cron: "0 0 * * 1"
   workflow_dispatch:
     inputs:
       years:
